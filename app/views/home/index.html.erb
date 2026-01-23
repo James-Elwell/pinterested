@@ -1,2 +1,6 @@
-<h1>Welcome to my Pinterested App</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="mt-4 p-5 bg-light rounded">
+    <h1>Welcome to my Pinterested App!</h1>
+    <p>Find me in app/views/home/index.html.erb</p>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-secondary" %>
+    <%= link_to "Join", new_user_registration_path, class: "btn btn-primary" %>
+</div>

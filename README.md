@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* GitHub Repository
+    git add .
+    git commit -am 'blahblahblah'
+    git push
