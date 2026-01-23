@@ -26,7 +26,10 @@ default: &default
 
 development:
   <<: *default
+
   database: pinterested_dev
+  # update the pinterested_dev database
+  # rails db:migrate
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,6 +65,9 @@ test:
   <<: *default
   database: pinterested_test
 
+# update the pinterested_test database
+# rails db:migrate RAILS_ENV=test
+
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -85,5 +91,5 @@ test:
 production:
   <<: *default
   database: pinterested_production
-  username: pinterested
-  password: <%= ENV["PINTERESTED_DATABASE_PASSWORD"] %>
+  #username: pinterested
+  #password: <%= ENV["PINTERESTED_DATABASE_PASSWORD"] %>
