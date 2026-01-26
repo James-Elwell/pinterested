@@ -1,5 +1,7 @@
 <div id="<%= dom_id pin %>">
   <p>
+    <%= image_tag pin.pin_image.variant(resize_to_limit: [300, 300]).processed %>
+    <br/>
     <strong>Description:</strong>
     <%= pin.description %>
   </p>

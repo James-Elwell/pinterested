@@ -1,4 +1,7 @@
 class PinsController < ApplicationController
+  # will get "activestorage Cannot generate URL for using Disk service" if this is absent
+  include ActiveStorage::SetCurrent
+
   before_action :set_pin, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index, show ]
   before_action :correct_user, only: %i[ edit, update, destroy ]
@@ -72,7 +75,7 @@ class PinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :pin_image)
     end
 end
 
